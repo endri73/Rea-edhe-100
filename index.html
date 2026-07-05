@@ -369,45 +369,35 @@
   @media (max-width: 768px) {
     section {
       padding: 30px 16px;
-      min-height: 90vh;
     }
 
-    /* Hero */
+    /* Hero - keep everything big, just adjust spacing */
     .sun {
-      width: 80px;
-      height: 80px;
-      top: 6%;
+      width: 120px;
+      height: 120px;
+      top: 5%;
     }
     .eyebrow {
-      font-size: 0.6rem;
-      letter-spacing: 0.2em;
+      font-size: 0.7rem;
     }
     h1 {
-      font-size: clamp(2.2rem, 10vw, 3.2rem);
+      font-size: clamp(2.6rem, 12vw, 4rem);
     }
     h1 span {
-      font-size: clamp(1.2rem, 5vw, 1.8rem);
+      font-size: clamp(1.4rem, 6vw, 2rem);
     }
     .hero-sub {
-      font-size: 0.95rem;
-      margin-top: 14px;
+      font-size: 1rem;
+      margin-top: 16px;
     }
 
-    /* Lanterns - hide some on mobile */
+    /* Lanterns - hide some, keep the rest same size */
     .lantern:nth-child(3) { display: none; }
     .lantern:nth-child(5) { display: none; }
-    .lantern {
-      width: 18px;
-      height: 24px;
-    }
-    .lantern::before {
-      height: 6px;
-      top: -6px;
-    }
 
-    /* Flowers - make smaller and reposition */
+    /* Flowers - reposition, keep size */
     .flower-deco {
-      transform: scale(0.6);
+      transform: scale(0.8);
       transform-origin: bottom;
     }
     .flower-deco:nth-child(1) { left: 2% !important; bottom: 4% !important; }
@@ -417,20 +407,66 @@
     .flower-deco:nth-child(5) { right: 10% !important; left: auto !important; bottom: 1% !important; }
     .flower-deco:nth-child(6) { display: none; }
 
-    /* Scroll hint */
     .scroll-hint {
-      font-size: 0.7rem;
-      bottom: 24px;
+      bottom: 20px;
     }
 
-    /* Cake */
+    /* Cake - keep big enough */
     .cake-wrap {
-      width: 200px;
+      width: 240px;
       margin-top: 30px;
     }
     .candles {
-      gap: 6px;
-      top: -12px;
+      gap: 8px;
+      top: -14px;
+    }
+    .candle {
+      width: 10px;
+      height: 40px;
+    }
+    .flame {
+      width: 12px;
+      height: 18px;
+      top: -18px;
+    }
+
+    /* Timer - increase spacing so text doesn't stick */
+    .timer-wrap {
+      padding: 20px 20px 24px;
+      margin-top: 35px;
+      max-width: 100%;
+    }
+    .timer-label {
+      font-size: 1.1rem;
+    }
+    .timer {
+      gap: 14px;
+      font-size: 1rem;
+    }
+    .timer span {
+      min-width: 64px;
+      padding: 8px 12px;
+    }
+    .timer span span {
+      font-size: 1.8rem;
+    }
+    .timer-sub {
+      font-size: 0.85rem;
+    }
+
+    /* Bunting - keep visible but scale slightly */
+    .bunting svg {
+      transform: scale(0.8);
+      transform-origin: top center;
+      margin-top: -10px;
+      margin-bottom: -10px;
+    }
+  }
+
+  /* Very small phones - just reduce a tiny bit */
+  @media (max-width: 400px) {
+    .cake-wrap {
+      width: 200px;
     }
     .candle {
       width: 8px;
@@ -438,115 +474,38 @@
     }
     .flame {
       width: 10px;
-      height: 16px;
-      top: -16px;
-    }
-    .section-title {
-      font-size: clamp(1.4rem, 5vw, 1.8rem);
-    }
-    .section-hint {
-      font-size: 0.8rem;
-      margin-bottom: 20px;
-    }
-    .wish-msg {
-      font-size: 1rem;
-      margin-top: 24px;
-    }
-
-    /* Timer */
-    .timer-wrap {
-      padding: 18px 16px 22px;
-      margin-top: 30px;
-    }
-    .timer-label {
-      font-size: 1rem;
-    }
-    .timer {
-      gap: 8px;
-      font-size: 0.8rem;
-    }
-    .timer span {
-      min-width: 52px;
-      padding: 6px 8px;
-      border-radius: 12px;
-    }
-    .timer span span {
-      font-size: 1.4rem;
-    }
-    .timer-sub {
-      font-size: 0.75rem;
-      margin-top: 10px;
-    }
-
-    /* Bunting (flamuri) */
-    .bunting svg {
-      transform: scale(0.7);
-      transform-origin: top center;
-      margin-top: -20px;
-      margin-bottom: -20px;
-    }
-
-    /* Sound button */
-    #soundBtn {
-      width: 40px;
-      height: 40px;
-      font-size: 1rem;
-      top: 12px;
-      right: 12px;
-    }
-
-    /* Balloons - smaller on mobile */
-    .balloon {
-      --size: 32px !important;
-    }
-  }
-
-  /* Very small phones */
-  @media (max-width: 400px) {
-    .cake-wrap {
-      width: 160px;
-    }
-    .candle {
-      width: 6px;
-      height: 28px;
-    }
-    .flame {
-      width: 8px;
-      height: 12px;
-      top: -13px;
+      height: 14px;
+      top: -14px;
     }
     .candles {
-      gap: 4px;
-      top: -10px;
+      gap: 6px;
+      top: -12px;
     }
     .timer span {
-      min-width: 44px;
-      padding: 4px 6px;
+      min-width: 54px;
+      padding: 6px 10px;
     }
     .timer span span {
-      font-size: 1.1rem;
+      font-size: 1.5rem;
     }
     .timer {
-      gap: 5px;
-      font-size: 0.7rem;
+      gap: 10px;
+      font-size: 0.9rem;
     }
     .timer-wrap {
-      padding: 14px 10px 18px;
-    }
-    .flower-deco {
-      transform: scale(0.4);
+      padding: 16px 14px 20px;
     }
     .sun {
-      width: 60px;
-      height: 60px;
+      width: 100px;
+      height: 100px;
     }
     h1 {
-      font-size: clamp(1.8rem, 10vw, 2.4rem);
+      font-size: clamp(2.2rem, 12vw, 3rem);
     }
     .bunting svg {
-      transform: scale(0.5);
-      margin-top: -30px;
-      margin-bottom: -30px;
+      transform: scale(0.65);
+      margin-top: -15px;
+      margin-bottom: -15px;
     }
   }
 </style>
