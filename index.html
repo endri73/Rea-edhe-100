@@ -365,13 +365,189 @@
   }
   #soundBtn:hover{transform:scale(1.08);}
 
-  @media (max-width:480px){
-    .cake-wrap{width:230px;}
-    .candles{gap:6px; top:-18px;}
-    .flower-deco{display:none;}
-    .timer span{min-width:54px; padding:6px 10px;}
-    .timer span span{font-size:1.4rem;}
-    .timer{gap:10px;}
+  /* ========== MOBILE RESPONSIVE ========== */
+  @media (max-width: 768px) {
+    section {
+      padding: 30px 16px;
+      min-height: 90vh;
+    }
+
+    /* Hero */
+    .sun {
+      width: 80px;
+      height: 80px;
+      top: 6%;
+    }
+    .eyebrow {
+      font-size: 0.6rem;
+      letter-spacing: 0.2em;
+    }
+    h1 {
+      font-size: clamp(2.2rem, 10vw, 3.2rem);
+    }
+    h1 span {
+      font-size: clamp(1.2rem, 5vw, 1.8rem);
+    }
+    .hero-sub {
+      font-size: 0.95rem;
+      margin-top: 14px;
+    }
+
+    /* Lanterns - hide some on mobile */
+    .lantern:nth-child(3) { display: none; }
+    .lantern:nth-child(5) { display: none; }
+    .lantern {
+      width: 18px;
+      height: 24px;
+    }
+    .lantern::before {
+      height: 6px;
+      top: -6px;
+    }
+
+    /* Flowers - make smaller and reposition */
+    .flower-deco {
+      transform: scale(0.6);
+      transform-origin: bottom;
+    }
+    .flower-deco:nth-child(1) { left: 2% !important; bottom: 4% !important; }
+    .flower-deco:nth-child(2) { left: 10% !important; bottom: 1% !important; }
+    .flower-deco:nth-child(3) { display: none; }
+    .flower-deco:nth-child(4) { right: 2% !important; left: auto !important; bottom: 4% !important; }
+    .flower-deco:nth-child(5) { right: 10% !important; left: auto !important; bottom: 1% !important; }
+    .flower-deco:nth-child(6) { display: none; }
+
+    /* Scroll hint */
+    .scroll-hint {
+      font-size: 0.7rem;
+      bottom: 24px;
+    }
+
+    /* Cake */
+    .cake-wrap {
+      width: 200px;
+      margin-top: 30px;
+    }
+    .candles {
+      gap: 6px;
+      top: -12px;
+    }
+    .candle {
+      width: 8px;
+      height: 34px;
+    }
+    .flame {
+      width: 10px;
+      height: 16px;
+      top: -16px;
+    }
+    .section-title {
+      font-size: clamp(1.4rem, 5vw, 1.8rem);
+    }
+    .section-hint {
+      font-size: 0.8rem;
+      margin-bottom: 20px;
+    }
+    .wish-msg {
+      font-size: 1rem;
+      margin-top: 24px;
+    }
+
+    /* Timer */
+    .timer-wrap {
+      padding: 18px 16px 22px;
+      margin-top: 30px;
+    }
+    .timer-label {
+      font-size: 1rem;
+    }
+    .timer {
+      gap: 8px;
+      font-size: 0.8rem;
+    }
+    .timer span {
+      min-width: 52px;
+      padding: 6px 8px;
+      border-radius: 12px;
+    }
+    .timer span span {
+      font-size: 1.4rem;
+    }
+    .timer-sub {
+      font-size: 0.75rem;
+      margin-top: 10px;
+    }
+
+    /* Bunting (flamuri) */
+    .bunting svg {
+      transform: scale(0.7);
+      transform-origin: top center;
+      margin-top: -20px;
+      margin-bottom: -20px;
+    }
+
+    /* Sound button */
+    #soundBtn {
+      width: 40px;
+      height: 40px;
+      font-size: 1rem;
+      top: 12px;
+      right: 12px;
+    }
+
+    /* Balloons - smaller on mobile */
+    .balloon {
+      --size: 32px !important;
+    }
+  }
+
+  /* Very small phones */
+  @media (max-width: 400px) {
+    .cake-wrap {
+      width: 160px;
+    }
+    .candle {
+      width: 6px;
+      height: 28px;
+    }
+    .flame {
+      width: 8px;
+      height: 12px;
+      top: -13px;
+    }
+    .candles {
+      gap: 4px;
+      top: -10px;
+    }
+    .timer span {
+      min-width: 44px;
+      padding: 4px 6px;
+    }
+    .timer span span {
+      font-size: 1.1rem;
+    }
+    .timer {
+      gap: 5px;
+      font-size: 0.7rem;
+    }
+    .timer-wrap {
+      padding: 14px 10px 18px;
+    }
+    .flower-deco {
+      transform: scale(0.4);
+    }
+    .sun {
+      width: 60px;
+      height: 60px;
+    }
+    h1 {
+      font-size: clamp(1.8rem, 10vw, 2.4rem);
+    }
+    .bunting svg {
+      transform: scale(0.5);
+      margin-top: -30px;
+      margin-bottom: -30px;
+    }
   }
 </style>
 </head>
